@@ -1,0 +1,12 @@
+server:
+  port: 2424
+
+spring:
+  rabbitmq:
+    addresses: localhost:5672
+    username: ingress
+    password: ingress
+
+rabbitmq:
+  queue:
+    card: CARD_Q
