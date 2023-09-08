@@ -1,6 +1,21 @@
 version: '3.8'
 
 services:
+  app:
+    build:
+      dockerfile: Dockerfile
+    container_name: ms_ingress_app
+    depends_on:
+      - postgres
+      - rabbitmq
+      - redis
+    environment:
+      - SPRING_DATASOURCE_URL =jdbc:postgresql://ingress_postgres_db:5432/ingress_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=ingress
+    ports:
+      - "2121:2121"
+
   redis:
     container_name: ingress_redis_cache
     image: redis:latest

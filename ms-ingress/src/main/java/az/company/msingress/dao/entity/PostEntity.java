@@ -56,4 +56,5 @@ public class PostEntity {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
 }
