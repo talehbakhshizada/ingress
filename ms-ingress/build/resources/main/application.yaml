@@ -35,7 +35,6 @@ spring:
           multiplier: 1
         missing-queues-fatal: false
 
-
 rabbitmq:
   queue:
     card: CARD_Q
@@ -44,7 +43,3 @@ rabbitmq:
 redis:
   server:
     url: redis://localhost:6379
-
-springdoc:
-  api-docs:
-    path: /api-docs
